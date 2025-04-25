@@ -1,0 +1,36 @@
+/*
+    Implementa un programa en C++ que tome un entero impar n≥5 como entrada e imprima por consola un patrón
+    con una forma específica utilizando el carácter asterisco ('*') y espacios (' ').
+*/
+
+#include<iostream>
+using namespace std;
+
+void dibujarPatron(int x){
+    int i, j;
+
+    cout<<"*";
+
+    for(i=1;i<x;i++){
+        if((i>1)||(i<=(x+1)/2)){
+            cout<<" ";
+            continue;
+        }
+        cout<<"*";
+    }
+
+}
+
+int main(){
+    
+    int n;
+    
+    do{
+        cout<<"Escriba un numero entero impar mayor a 5: ";
+        cin>>n;
+    }while(n<5 && n%2==1);
+
+    dibujarPatron(n);
+    
+    return 0;
+}
